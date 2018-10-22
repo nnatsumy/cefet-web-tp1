@@ -1,0 +1,76 @@
+<?php 
+    if(isset($_POST['submit'])){
+        $myemail = "natsumyiass@gmail.com"; // this is your Email address
+        $email = $_POST['email']; // this is the sender's Email address
+        $name = $_POST['name'];
+        $telephone = $_POST['telephone'];
+        $subject = "Formulario site pessoal";
+        $message = $name . "\n\ntelefone: " . $telephone . " escreveu a mensagem:" . "\n\n" . $_POST['message'];
+
+        $headers = "From:" . $from;
+        $headers2 = "From:" . $to;
+        mail($myemail,$subject,$message,$headers);
+    }
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Natália Natsumy</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="assets/cat_icon.png">
+  </head>
+  <body>
+    <header id="topo-da-pagina">
+      <div id = "logo">
+        <a href="index.html">
+          <img src="assets/cat_icon.png" id = "logo">
+        </a>
+      </div>
+      <div id = "header-title">
+        <h1>Natália Natsumy</h1>
+        <h2>Um site pessoal</h2>
+      </div>
+      <div id = "header-menu">
+        <ul class = "menu-itens">
+          <li><a href="index.html">INICIAL</a></li>
+          <li><a href="projetos.html">PROJETOS</a></li>
+          <li><a href="curriculum.html">CURRICULUM VITAE</a></li>
+          <li><a href="contato.html">CONTATO</a></li>
+        </ul>
+      </div>      
+    </header>  
+    <div id="container">
+      <h1>CONTATO</h1>
+      <div class="underline">
+      </div>
+      <div class="icon_wrapper">
+        <img src="assets/contact-icon.png" id="contact-icon">
+      </div>
+      <form action="#enviar.php" method="POST" id="contact_form">
+        <div class="name">
+          <label for="name"></label>
+          <input type="text" placeholder="Nome" name="name" id="name_input" required>
+        </div>
+        <div class="email">
+          <label for="email"></label>
+          <input type="email" placeholder="E-mail" name="email" id="email_input" required>
+        </div>
+        <div class="telephone">
+          <label for="name"></label>
+          <input type="number" placeholder="Telefone" name="telephone" id="telephone_input" required>
+        </div>
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" placeholder="Me escreva uma mensagem!" id="message_input" cols="30" rows="5" required></textarea>
+        </div>
+        <div class="submit">
+          <input type="submit" value="submit" id="form_button" />
+        </div>
+      </form>
+      
+    </div>
+  </body>
+</html>
