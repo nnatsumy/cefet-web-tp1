@@ -144,9 +144,15 @@ li {
   shape-outside: circle(50%);
 }
 
+#cprojetos > h2{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .foto {
   display: inline-block;
   width: 125px;
+  height: 125px;
   border: 2px solid;
   box-shadow: 3px 3px 3px black;
 }
