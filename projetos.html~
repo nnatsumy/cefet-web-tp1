@@ -32,7 +32,7 @@
       <h1>Projetos</h1>
       <p>Nessa página estão listados os últimos projetos desenvolvidos por mim.</p>
       <div id='modal'>
-        <img src="cefet-ovelha.png" id = "imgmodal">
+        <img src="assets/cefet-ninja.png" id = "imgmodal">
       </div>
       <h2>Website Raças de Ovelha</h2>
       <img src="assets/cefet-ovelha.png" class="circular foto" id="img1">
