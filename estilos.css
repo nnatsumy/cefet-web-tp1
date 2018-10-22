@@ -12,6 +12,26 @@ main {
   text-align: center;
 }
 
+#modal {
+  position: fixed;
+  top: 50px;
+  bottom: -50px;
+  z-index: 1;
+  width: 200px;
+  height: 100px;
+}
+
+
+#imgclose {
+  position: fixed;
+  top: 50px;
+  bottom: -50px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+
+}
 main > h1 {
   padding-top:  20px;
 }
